@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <form id="imcForm">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" required><br><br>
+
+        <label for="peso">Peso (kg):</label><br>
+        <input type="number" id="peso" name="peso" required><br><br>
+
+        <label for="estatura">Estatura (m):</label><br>
+        <input type="number" step="0.01" id="estatura" name="estatura" required><br><br>
+
+        <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+    </form>
+    <script src="primerapp.js"></script>
+</body>
+</html>
