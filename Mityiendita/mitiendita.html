@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+</head>
+<body>
+
+    <script>
+        const productos = [
+            { nombre: "Camisa", precio: 300 },
+            { nombre: "Pantalón", precio: 500 },
+            { nombre: "Zapatos", precio: 800 },
+            { nombre: "Sombrero", precio: 200 }
+        ];
+
+        let carrito = [];
+
+        // Función que muestra el menú interactivo
+        const mostrarMenu = () => {
+            let opcion = "";
+            while (opcion !== "6") {
+                opcion = prompt(`
+                    Seleccione un producto para agregar al carrito:
+                    1. Camisa - $300
+                    2. Pantalón - $500
+                    3. Zapatos - $800
+                    4. Sombrero - $200
+                    5. Ver Carrito y Total
+                    6. Salir
+                `);
+
+                switch (opcion) {
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                        agregarAlCarrito(parseInt(opcion) - 1);
+                        break;
+                    case "5":
+                        mostrarCarrito();
+                        break;
+                    case "6":
+                        alert("Gracias por su compra. ¡Hasta luego!");
+                        break;
+                    default:
+                        alert("Opción no válida, intente de nuevo.");
+                }
+            }
+        };
+
+        // Función para agregar un producto al carrito
+        const agregarAlCarrito = (indiceProducto) => {
+            carrito.push(productos[indiceProducto]);
+            alert(`${productos[indiceProducto].nombre} ha sido agregado al carrito.`);
+        };
+
+        // Función para mostrar los productos del carrito y el total
+        const mostrarCarrito = () => {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío.");
+                return;
+            }
+
+            let mensajeCarrito = "Productos en el carrito:\n";
+            let total = 0;
+
+            carrito.forEach((producto, index) => {
+                mensajeCarrito += `${index + 1}. ${producto.nombre} - $${producto.precio}\n`;
+                total += producto.precio;
+            });
+
+            mensajeCarrito += `\nTotal: $${total}`;
+            alert(mensajeCarrito);
+        };
+
+        mostrarMenu();
+    </script>
+</body>
+</html>
