@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+  <div class="calculadora">
+    <div id="pantalla" class="pantalla">0</div>
+    <div class="botones">
+      <button class="boton boton-clear" onclick="limpiar()">C</button>
+      <button class="boton boton-numero" onclick="agregarValor('7')">7</button>
+      <button class="boton boton-numero" onclick="agregarValor('8')">8</button>
+      <button class="boton boton-numero" onclick="agregarValor('9')">9</button>
+      <button class="boton boton-operador" onclick="agregarValor('/')">/</button>
+      <button class="boton boton-numero" onclick="agregarValor('4')">4</button>
+      <button class="boton boton-numero" onclick="agregarValor('5')">5</button>
+      <button class="boton boton-numero" onclick="agregarValor('6')">6</button>
+      <button class="boton boton-operador" onclick="agregarValor('*')">*</button>
+      <button class="boton boton-numero" onclick="agregarValor('1')">1</button>
+      <button class="boton boton-numero" onclick="agregarValor('2')">2</button>
+      <button class="boton boton-numero" onclick="agregarValor('3')">3</button>
+      <button class="boton boton-operador" onclick="agregarValor('-')">-</button>
+      <button class="boton boton-numero" onclick="agregarValor('0')">0</button>
+      <button class="boton boton-numero" onclick="agregarValor('.')">.</button>
+      <button class="boton boton-operador" onclick="agregarValor('+')">+</button>
+      <button class="boton boton-igual" onclick="calcular()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let pantalla = "";
+
+    function agregarValor(valor) {
+      pantalla += valor;
+      document.getElementById("pantalla").innerText = pantalla;
+    }
+
+    function calcular() {
+      try {
+        pantalla = eval(pantalla).toString();
+      } catch (error) {
+        pantalla = "Error";
+      }
+      document.getElementById("pantalla").innerText = pantalla;
+    }
+
+    function limpiar() {
+      pantalla = "";
+      document.getElementById("pantalla").innerText = pantalla;
+    }
+  </script>
+   <div> <a href="/">Volver a la Página Principal</a></div>
+    
+</body>
+</html>

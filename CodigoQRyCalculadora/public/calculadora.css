@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+  }
+  
+  .calculadora {
+    width: 90vw; /* Ancho del 90% de la ventana */
+    max-width: 400px; /* Ancho máximo para la calculadora */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pantalla {
+    width: 100%;
+    height: 15vh; /* Altura relativa al 15% de la ventana */
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 4vh; /* Tamaño de fuente relativo */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    flex-grow: 1; /* Permite que la cuadrícula crezca */
+  }
+  
+  .boton {
+    padding: 20px;
+    font-size: 2.5vh; /* Tamaño de fuente relativo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.2s; /* Transición para el hover */
+  }
+  
+  .boton-operador {
+    background-color: #f39c12;
+  }
+  
+  .boton-numero {
+    background-color: #333;
+  }
+  
+  .boton-igual {
+    background-color: #27ae60;
+    grid-column: span 4;
+  }
+  
+  .boton-clear {
+    background-color: #e74c3c;
+    grid-column: span 4;
+  }
+  
+  .boton:hover {
+    opacity: 0.8; /* Efecto hover */
+  }
+  
