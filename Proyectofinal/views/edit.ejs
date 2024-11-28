@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Proyecto Final</title>
+</head>
+<body>
+  <div class="centrar">
+      <div class="titulo">
+          <h1>Proyecto Final de Programación Web 2</h1>
+      </div>
+  </div>
+  <div class="centrar">
+      <div>
+          <h1>Editar Usuarios</h1>
+          <form action="/edit/<%= users.id%>" method="post">
+              <div class="formeditar">
+                  <br>
+                  <div class="centrar">
+                      <label for="name" style="width: 20%;">Nombre:</label>
+                      <input type="text" id="name" name="name" required class="inputeditar" value="<%= users.name%>">
+                  </div>
+                  <br>
+                  <div class="centrar">
+                      <label for="email" style="width: 20%;">Correo:</label>
+                      <input type="email" id="email" name="email" required class="inputeditar" value="<%= users.email%>">
+                  </div>
+                  <br>
+              </div>
+              <br>
+              <div class="centrar">
+                  <button type="submit" class="editar" style="width: 200px;">Actualizar</button>
+              </div>
+              <br>
+          </form>
+          <div class="centrar">
+              <a href="/"><button class="eliminar">Cancelar</button></a>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
