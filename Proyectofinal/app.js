@@ -13,6 +13,7 @@ const port = 3008;
 app.use('/', pageRutes);
 app.use(express.static('estilos'))
 
+
 app.use(bodyParser.urlencoded({extended: false})); /* analizar los datos del cuerpo de las solicitudes HTTP,
     especificamente los datos que provienen de formulario HTML enviados atraves de propiedad POST y GET*/
 
