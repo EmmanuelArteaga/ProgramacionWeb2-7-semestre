@@ -1,0 +1,119 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Centering containers */
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Title styling */
+.titulo h1 {
+    font-size: 2.5em;
+    color: #4a5568; /* Gris oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff; /* Blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden;
+}
+
+/* Table header styling */
+th {
+    padding: 12px;
+    background-color: #b2c7d9; /* Azul pastel */
+    color: #1a202c; /* Gris oscuro */
+    text-align: left;
+}
+
+/* Table body styling */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0; /* Gris claro */
+    color: #2d3748; /* Gris medio */
+}
+
+/* Action buttons inside the table */
+.acciones {
+    text-align: center;
+}
+
+button {
+    background-color: #b2c7d9; /* Azul pastel */
+    color: #1a202c; /* Gris oscuro */
+    border: none;
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #94afc1; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+/* Button styles for specific actions */
+.agregar {
+    background-color: #c8e6c9; /* Verde pastel */
+    color: #1a202c; /* Gris oscuro */
+}
+
+.editar {
+    background-color: #fff3cd; /* Amarillo pastel */
+    color: #1a202c; /* Gris oscuro */
+}
+
+.eliminar {
+    background-color: #f8d7da; /* Rojo pastel */
+    color: #721c24; /* Rojo oscuro */
+}
+
+/* Add more spacing and some style for the buttons */
+.agregar {
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .titulo h1 {
+        font-size: 2em;
+    }
+
+    .agregar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
